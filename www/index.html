@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <title>My App</title>  
+  <title>Soton Squash Club App</title>  
   
   <link rel="stylesheet" href="lib/onsen/css/onsenui.css">  
   <link rel="stylesheet" href="styles/onsen-css-components-blue-basic-theme.css">  
@@ -21,7 +21,7 @@
 
   <style>
     .page--menu-page__background {
-      background-color: #333;
+      background-color: #d90b0b;
     }
     
     .page--menu-page__content {
@@ -83,33 +83,44 @@
 
 <body>    
   
-  <ons-sliding-menu
+  <!-- Defines the sliding menu and some attributes -->
+  <ons-sliding-menu 
     menu-page="menu.html" main-page="page1.html" side="left"
     var="menu" type="reveal" max-slide-distance="260px" swipable="true">
   </ons-sliding-menu>
 
+  <!-- Sliding Menu Contents -->
   <ons-template id="menu.html">
     <ons-page modifier="menu-page">
       <ons-toolbar modifier="transparent"></ons-toolbar>
-
+		
+	  <!-- Defines Menu Item 1 -->
       <ons-list class="menu-list">
-        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
-          <ons-icon icon="fa-plus"></ons-icon>
-          New Post
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})"> <!-- Sets the mainpage to page1.html and closes the menu -->
+          <ons-icon icon="fa-plus"></ons-icon> <!-- Sets menu item icon -->
+          Register/Login<!-- menu item name -->
         </ons-list-item>
 
+		<!-- Defines Menu Item 2 -->
         <ons-list-item class="menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
           <ons-icon icon="fa-bookmark"></ons-icon>
-          Bookmark
+          Club
+        </ons-list-item>
+		
+		<!-- Defines Menu Item 2 -->
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page3.html', {closeMenu: true})">
+          <ons-icon icon="fa-bookmark"></ons-icon>
+          About Squash
         </ons-list-item>
 
+		<!-- Defines Menu Item 3 -->
         <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
           <ons-icon icon="fa-twitter"></ons-icon>
           Official Twitter
         </ons-list-item>
       </ons-list>
 
-      <br>
+      <br> <!-- Defines bottom menu section -->
 
       <ons-list class="bottom-menu-list">
         <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
@@ -128,6 +139,7 @@
     </ons-page>
   </ons-template>
 
+  <!-- Start of Page 1 -->
   <ons-template id="page1.html">
     <ons-page>
       <ons-toolbar>
@@ -136,7 +148,7 @@
             <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center">Page 1</div>
+        <div class="center">Home</div>
       </ons-toolbar>
 
       <ons-row style="margin-top: 100px;">
@@ -149,7 +161,9 @@
       </ons-row>
     </ons-page>
   </ons-template>
+  <!-- End of Page 1 -->
 
+  <!-- Start of Page 2 -->
   <ons-template id="page2.html">
     <ons-page>
       <ons-toolbar>
@@ -158,7 +172,7 @@
             <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center">Page 2</div>
+        <div class="center">The Club</div>
       </ons-toolbar>
 
 
@@ -172,6 +186,32 @@
 
     </ons-page>
   </ons-template>
+  <!-- End of Page 2 -->
+  
+  <!-- Start of Page 2 -->
+  <ons-template id="page3.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="menu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">About Squash</div>
+      </ons-toolbar>
+
+
+      <ons-row style="margin-top: 100px;">
+        <ons-col align="center">
+          <ons-button modifier="light" ng-click="menu.toggleMenu()">
+            Toggle Menu
+          </ons-button>
+        </ons-col>
+      </ons-row>
+
+    </ons-page>
+  </ons-template>
+  <!-- End of Page 2 -->
  
 </body>
 </html>
