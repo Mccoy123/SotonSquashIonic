@@ -51,7 +51,7 @@
 		<!-- Defines Menu Item 2 -->
         <ons-list-item class="menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
           <ons-icon icon="fa-bookmark"></ons-icon>
-          Club
+          About Club
         </ons-list-item>
 		
 		<!-- Defines Menu Item 3 -->
@@ -61,7 +61,7 @@
         </ons-list-item>
 
 		<!-- Defines Menu Item 4 -->
-        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page3.html', {closeMenu: true})">
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('page4.html', {closeMenu: true})">
           <ons-icon icon="fa-twitter"></ons-icon>
           Official Twitter
         </ons-list-item>
@@ -70,16 +70,19 @@
       <br> <!-- Defines bottom menu section -->
 
       <ons-list class="bottom-menu-list">
-        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
-          Settings
-          <div class="notification menu-notification">3</div>
+        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page4.html', {closeMenu: true})">
+          Challenge Player
         </ons-list-item>
 
-        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
-          Help
+        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page4.html', {closeMenu: true})">
+          Upload Result
+        </ons-list-item>
+		
+		<ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page4.html', {closeMenu: true})">
+          My Profile
         </ons-list-item>
 
-        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
+        <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page4.html', {closeMenu: true})">
           Send feedback
         </ons-list-item>
       </ons-list>
@@ -95,7 +98,7 @@
             <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center">Home</div>
+        <div class="center">Register/Login</div>
       </ons-toolbar>
 
       <ons-row style="margin-top: 100px;">
@@ -119,7 +122,7 @@
             <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
           </ons-toolbar-button>
         </div>
-        <div class="center">The Club</div>
+        <div class="center">About The Club</div>
       </ons-toolbar>
 
 
@@ -159,6 +162,31 @@
     </ons-page>
   </ons-template>
   <!-- End of Page 3 -->
+  
+  <!-- Start of Page 4 -->
+  <ons-template id="page4.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="menu.toggle()">
+            <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">BLANK PAGE 4</div>
+      </ons-toolbar>
+
+
+      <ons-row style="margin-top: 100px;">
+        <ons-col align="center">
+          <ons-button modifier="light" ng-click="menu.toggleMenu()">
+            Toggle Menu
+          </ons-button>
+        </ons-col>
+      </ons-row>
+
+    </ons-page>
+  </ons-template>
+  <!-- End of Page 4 -->
  
 </body>
 </html>
