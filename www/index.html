@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/onsen-css-components-blue-basic-theme.css">  
   <link rel="stylesheet" href="styles/app.css"/>
   <link rel="stylesheet" href="css/menuSlide.css"/>
+  <link rel="stylesheet" href="css/carousel.css"/>
 
   <script src="lib/onsen/js/angular/angular.js"></script>    
   <script src="lib/onsen/js/onsenui.js"></script>    
@@ -33,7 +34,7 @@
   <!-- Defines the sliding menu and some attributes -->
   <ons-sliding-menu 
     menu-page="menu.html" main-page="page1.html" side="left"
-    var="menu" type="reveal" max-slide-distance="260px" swipable="true">
+    var="menu" type="reveal" max-slide-distance="260px" swipe-target-width="20px" swipeable="false">
   </ons-sliding-menu>
 
   <!-- Sliding Menu Contents -->
@@ -150,14 +151,21 @@
         <div class="center">About Squash</div>
       </ons-toolbar>
 
-
-      <ons-row style="margin-top: 100px;">
-        <ons-col align="center">
-          <ons-button modifier="light" ng-click="menu.toggleMenu()">
-            Toggle Menu
-          </ons-button>
-        </ons-col>
-      </ons-row>
+    <ons-carousel swipeable overscrollable auto-scroll fullscreen var="carousel">
+		<ons-carousel-item style="background-color: gray;">
+		  <div class="item-label">GRAY</div>
+		</ons-carousel-item>
+		<ons-carousel-item style="background-color: #085078;">
+		  <div class="item-label">BLUE</div>
+		</ons-carousel-item>
+		<ons-carousel-item style="background-color: #373B44;">
+		  <div class="item-label">DARK</div>
+		</ons-carousel-item>
+		<ons-carousel-item style="background-color: #D38312;">
+		  <div class="item-label">ORANGE</div>
+		</ons-carousel-item>
+		<ons-carousel-cover><div class="cover-label">Swipe left or right</div></ons-carousel-cover>
+    </ons-carousel>
 
     </ons-page>
   </ons-template>
